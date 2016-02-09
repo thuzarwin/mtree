@@ -1,0 +1,41 @@
+{
+  "name": "mtree",
+  "version": "0.0.1",
+  "description": "javascript implementation of merkle trees",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run testsuite && npm run linter",
+    "testsuite": "./node_modules/.bin/mocha test/** --recursive",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive",
+    "linter": "./node_modules/.bin/jshint --config .jshintrc ./index.js ./lib ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gordonwritescode/mtree.git"
+  },
+  "keywords": [
+    "merkle",
+    "hash",
+    "tree",
+    "merkle",
+    "tree",
+    "tree"
+  ],
+  "author": "Gordon Hall <gordon@gordonwritescode.com>",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gordonwritescode/mtree/issues"
+  },
+  "homepage": "https://github.com/gordonwritescode/mtree#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.6",
+    "istanbul": "^0.4.2",
+    "jshint": "^2.8.0",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3"
+  }
+}
