@@ -68,23 +68,25 @@ describe('MerkleTree', function(){
           return MerkleTree.prototype._hasher(input);
         })
       );
-      expect(tree.level(2).indexOf(
-        '62af5c3cb8da3e4f25061e829ebeea5c7513c54949115b1acc225930a90154da'
-      )).to.equal(0);
-      expect(tree.level(2).indexOf(
-        'd3a0f1c792ccf7f1708d5422696263e35755a86917ea76ef9242bd4a8cf4891a'
-      )).to.equal(1);
-      expect(tree.level(2).indexOf(
-        '1b3dae70b4b0a8fd252a7879ec67283c0176729bfebc51364fb9e9fb0598ba9e'
-      )).to.equal(2);
-      expect(tree.level(2).indexOf(
-        '520328b68932e91dbd3194a6d12050ffa99d1dc603400c375850a888d2706135'
-      )).to.equal(3);
+      expect(tree.level(2).length).to.equal(4);
+      expect(tree.level(2)[0].toString('hex')).to.eql(
+        'e5a01fee14e0ed5c48714f22180f25ad8365b53f9779f79dc4a3d7e93963f94a'
+      );
+      expect(tree.level(2)[1].toString('hex')).to.eql(
+        'bffe0b34dba16bc6fac17c08bac55d676cded5a4ade41fe2c9924a5dde8f3e5b'
+      );
+      expect(tree.level(2)[2].toString('hex')).to.eql(
+        '04fa33f8b4bd3db545fa04cdd51b462509f611797c7bfe5c944ee2bb3b2ed908'
+      );
+      expect(tree.level(2)[3].toString('hex')).to.eql(
+        '140257c1540113794d2ae3394879e586ca5caebca19663ff87417892cf36fd23'
+      );
     });
 
   });
 
   describe('#root', function() {
+    let h = 'bd7c8a900be9b67ba7df5c78a652a8474aedd78adb5083e80e49d9479138a23f';
 
     it('should return the root node', function() {
       var tree = new MerkleTree(
@@ -92,9 +94,7 @@ describe('MerkleTree', function(){
           return MerkleTree.prototype._hasher(input);
         })
       );
-      expect(tree.root()).to.equal(
-        '5d2a8967adb92f46e3266c0cddef844418e95fc6dbe733029e8a7da6145a5afe'
-      );
+      expect(tree.root()).to.eql(Buffer(h, 'hex'));
     });
 
   });
