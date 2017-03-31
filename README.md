@@ -3,8 +3,8 @@ Mtree
 
 JavaScript implementation of [Merkle Trees](https://en.wikipedia.org/wiki/Merkle_tree).
 
-[![Build Status](https://img.shields.io/travis/gordonwritescode/mtree.svg?style=flat-square)](https://travis-ci.org/gordonwritescode/mtree)
-[![Coverage Status](https://img.shields.io/coveralls/gordonwritescode/mtree.svg?style=flat-square)](https://coveralls.io/r/gordonwritescode/mtree)
+[![Build Status](https://img.shields.io/travis/bookchin/mtree.svg?style=flat-square)](https://travis-ci.org/bookchin/mtree)
+[![Coverage Status](https://img.shields.io/coveralls/bookchin/mtree.svg?style=flat-square)](https://coveralls.io/r/bookchin/mtree)
 [![NPM](https://img.shields.io/npm/v/mtree.svg?style=flat-square)](https://www.npmjs.com/package/mtree)
 
 Usage
